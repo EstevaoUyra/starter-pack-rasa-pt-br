@@ -1,11 +1,6 @@
 intents:
 - greet
-- goodbye
 - thanks
-- deny
-- joke
-- name
-
 
 entities:
 - name
@@ -25,15 +20,9 @@ actions:
 
 
 templates:
-  utter_name:
-  - text: "Hey there! Tell me your name."
-
   utter_greet:
   - text: "Nice to you meet you {name}. How can I help?"
 
-  utter_goodbye:
-  - text: "Talk to you later!"
-  
   utter_thanks:
-  - text: "My pleasure."
+  - text: "O prazer foi todo meu."
   
