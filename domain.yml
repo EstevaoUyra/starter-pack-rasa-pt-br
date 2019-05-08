@@ -1,13 +1,13 @@
 intents:
 - greet
 - thanks
-
+- search_arxiv
+-
 entities:
-- name
-
+- theme
 
 slots:
-  name:
+  theme:
     type: text
 
 
