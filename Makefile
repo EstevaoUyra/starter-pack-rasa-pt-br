@@ -35,3 +35,7 @@ cmdline:
 	
 action-server:
 	python -m rasa_core_sdk.endpoint --actions actions
+
+install:
+	pip install -r requirements.txt
+	python -m spacy download pt_core_news_sm
