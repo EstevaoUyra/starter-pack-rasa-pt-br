@@ -10,7 +10,6 @@
 - eae
 - hey
 
-
 ## intent:thanks
 - Obrigado
 - Muito obrigado
