@@ -2,7 +2,7 @@ intents:
 - greet
 - thanks
 - search_arxiv
--
+
 entities:
 - theme
 
@@ -14,7 +14,7 @@ slots:
 actions:
 - utter_thanks
 - utter_greet
-
+- action_search_arxiv
 
 templates:
   utter_greet:

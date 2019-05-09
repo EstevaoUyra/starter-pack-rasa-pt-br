@@ -32,4 +32,3 @@ class ActionSearchArxiv(Action):
         q = arxiv.query(query, sort_by="lastUpdatedDate")
         dispatcher.utter_message(pretty_arxiv(q))  # send the message back to the user
         return []
-

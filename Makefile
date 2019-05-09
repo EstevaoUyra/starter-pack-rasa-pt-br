@@ -31,7 +31,8 @@ train-core:
 	python -m rasa_core.train -d domain.yml -s data/stories.md -o models/current/dialogue -c policies.yml
 
 cmdline:
-	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml
+	make action-server &
+	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml --debug
 	
 action-server:
 	python -m rasa_core_sdk.endpoint --actions actions
