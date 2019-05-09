@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 def pretty_arxiv(query_results):
     text = []
     for q_ in query_results:
-        text.append("- {}\n\t{}\n\t{}\n\t{}".format(q_['title'], q_['authors'], q_['published'][:10],
+        text.append("- {}\n\t{}\n\t{}\t{}\n".format(q_['title'], q_['authors'], q_['published'][:10],
                                                  q_['links'][0]['href']))
     return '\n'.join(text)
 
@@ -29,6 +29,6 @@ class ActionSearchArxiv(Action):
     def run(self, dispatcher, tracker, domain):
         # what your action should do
         query = tracker.get_slot('theme')
-        q = arxiv.query(query, sort_by="lastUpdatedDate")
+        q = arxiv.query(query, sort_by="lastUpdatedDate", max_results=3)
         dispatcher.utter_message(pretty_arxiv(q))  # send the message back to the user
         return []

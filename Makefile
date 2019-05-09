@@ -32,7 +32,7 @@ train-core:
 
 cmdline:
 	make action-server &
-	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml --debug
+	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu --endpoints endpoints.yml
 	
 action-server:
 	python -m rasa_core_sdk.endpoint --actions actions
@@ -40,3 +40,7 @@ action-server:
 install:
 	pip install -r requirements.txt
 	python -m spacy download pt_core_news_sm
+
+webex:
+	python -m rasa_core.run -d models/current/dialogue -u models/current/nlu \
+    --port 5002 --credentials credentials.yml --debug

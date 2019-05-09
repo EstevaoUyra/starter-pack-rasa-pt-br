@@ -31,3 +31,4 @@
 - O que há de novo em [machine learning](theme)
 - O que há de novo em [nlp](theme)
 - O que há de novo em [chatbots](theme)
+- Tem algo novo em [deep reinforcement learning](theme)?
